@@ -1,0 +1,101 @@
+/* GOBAL VARIABLER */
+:root {
+  /* Variabler på farger, font og størrelser */
+  --primaryColor: purple;
+  --secondaryColor: green;
+  --accentColor: lightpink;
+
+  --fontFamily: "Fantasy";
+
+  --generalSpace: 16px;
+
+  --myImage: "./code.png";
+}
+
+/* GLOBAL STYLING */
+/* Header */
+header {
+  /* display: flex; */
+  --primaryColor: orange;
+  background-color: var(--primaryColor);
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.fiftyFifty {
+  width: 50%;
+}
+
+/* LOKAL STYLING */
+/* Header */
+.headerNav {
+  /* display: flex; */
+  flex-direction: space-between;
+}
+
+.navList {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: var(--generalSpace);
+}
+
+/* Hero */
+.hero {
+  /* display: flex; */
+}
+
+.heroText,
+.heroImg {
+  /* width: 50%; */
+}
+
+.heroText {
+  text-align: center;
+  background-color: var(--primaryColor);
+}
+
+.heroImg {
+  border-radius: 50%;
+  height: 400px;
+}
+
+@media (max-width: 426px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .fiftyFifty.touchLine {
+    width: 100%;
+  }
+
+  .heroText {
+    background-color: var(--secondaryColor);
+  }
+}
+
+/* About */
+.about {
+  /* display: flex; */
+  flex-direction: column;
+  background-color: var(--primaryColor);
+}
+
+.aboutContainer {
+  /* display: flex; */
+}
+
+.aboutList,
+.aboutText {
+  width: 50%;
+}
