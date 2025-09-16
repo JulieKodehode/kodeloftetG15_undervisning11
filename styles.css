@@ -1,22 +1,29 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* GOBAL VARIABLER */
 :root {
   /* Variabler på farger, font og størrelser */
-  --primaryColor: purple;
-  --secondaryColor: green;
-  --accentColor: lightpink;
+  --primaryColor: #87BBA2;
+  --secondaryColor: #3B6064;
+  --accentColor: #C9E4CA;
 
-  --fontFamily: "Fantasy";
+  --fontFamily: "Roboto";
 
   --generalSpace: 16px;
+  --bigSpace: 32px;
 
   --myImage: "./code.png";
 }
 
 /* GLOBAL STYLING */
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
 /* Header */
 header {
-  /* display: flex; */
-  --primaryColor: orange;
   background-color: var(--primaryColor);
 }
 
@@ -38,8 +45,8 @@ section {
 
 /* LOKAL STYLING */
 /* Header */
-.headerNav {
-  flex-direction: space-between;
+.header {
+  justify-content: space-between;
 }
 
 .navList {
@@ -49,18 +56,69 @@ section {
   gap: var(--generalSpace);
 }
 
+.hamburgerIcon {
+  display: none;
+}
+
 /* Hero */
+.hero {
+  align-items: center;
+  justify-content: center;
+}
 .heroText {
   text-align: center;
-  background-color: var(--primaryColor);
 }
 
 .heroImg {
   border-radius: 50%;
-  height: 400px;
+  height: 500px;
+  width: 500px;
 }
 
-@media (max-width: 426px) {
+/* About */
+.about {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--generalSpace);
+  background-color: var(--primaryColor);
+}
+
+.aboutList,
+.aboutText {
+  width: 50%;
+}
+
+/* Project */
+.project {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--generalSpace);
+}
+
+.projectContainer {
+  gap: var(--bigSpace);
+}
+
+.projectCard {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primaryColor);
+}
+
+/* MEDIA QUERRY */
+/* Tablet and below */
+@media (max-width: 769px) {
+  /* Header */
+
+  /* Hero */
   .hero {
     flex-direction: column;
   }
@@ -69,18 +127,20 @@ section {
     width: 100%;
   }
 
-  .heroText {
-    background-color: var(--secondaryColor);
+  .fiftyFifty.touchLine.heroImg {
+    height: 300px;
+    width: 300px;
   }
-}
 
-/* About */
-.about {
-  flex-direction: column;
-  background-color: var(--primaryColor);
-}
+  /* About */
 
-.aboutList,
-.aboutText {
-  width: 50%;
+  /* Project */
+  .projectContainer {
+    flex-direction: column;
+  }
+
+  /* Footer */
+}.footer {
+  align-items: center;
+  justify-content: center;
 }
