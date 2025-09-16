@@ -39,7 +39,6 @@ section {
 /* LOKAL STYLING */
 /* Header */
 .headerNav {
-  /* display: flex; */
   flex-direction: space-between;
 }
 
@@ -51,15 +50,6 @@ section {
 }
 
 /* Hero */
-.hero {
-  /* display: flex; */
-}
-
-.heroText,
-.heroImg {
-  /* width: 50%; */
-}
-
 .heroText {
   text-align: center;
   background-color: var(--primaryColor);
@@ -86,13 +76,8 @@ section {
 
 /* About */
 .about {
-  /* display: flex; */
   flex-direction: column;
   background-color: var(--primaryColor);
-}
-
-.aboutContainer {
-  /* display: flex; */
 }
 
 .aboutList,
